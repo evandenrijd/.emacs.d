@@ -127,6 +127,8 @@
 (require 'setup-ffip)
 (require 'setup-html-mode)
 (require 'setup-paredit)
+(require 'setup-perl)
+(require 'setup-grep-ack)
 
 (require 'prodigy)
 (global-set-key (kbd "C-x M-m") 'prodigy)
@@ -149,8 +151,8 @@
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
-(eval-after-load 'ruby-mode '(require 'setup-ruby-mode))
-(eval-after-load 'clojure-mode '(require 'setup-clojure-mode))
+;;(eval-after-load 'ruby-mode '(require 'setup-ruby-mode))
+;;(eval-after-load 'clojure-mode '(require 'setup-clojure-mode))
 (eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
 
 ;; Load stuff on demand
@@ -231,3 +233,15 @@
 ;; Conclude init by setting up specifics for the current user
 (when (file-exists-p user-settings-dir)
   (mapc 'load (directory-files user-settings-dir nil "^[^#].*el$")))
+
+;; override some "handy" shortcuts
+(global-set-key (kbd "C-x o") 'other-window)
+
+(global-set-key [M-f6]  'previous-tag)
+(global-set-key [C-f6]  'next-tag)
+(global-set-key [S-f6]  'second-tag)
+(global-set-key [f6]    'find-tag)
+
+(global-set-key [f8]    'kill-this-buffer)
+
+(global-set-key [C-f11] 'compile)
