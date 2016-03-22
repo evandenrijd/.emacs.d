@@ -267,4 +267,32 @@
     (unless first-line
       (indent-line-to offset))))
 
+;; installed npm -g install js-beautify
+(require 'web-beautify) ;; Not necessary if using ELPA package
+(eval-after-load 'js2-mode
+  '(define-key js2-mode-map (kbd "C-c b") 'web-beautify-js))
+(eval-after-load 'json-mode
+  '(define-key json-mode-map (kbd "C-c b") 'web-beautify-js))
+(eval-after-load 'sgml-mode
+  '(define-key html-mode-map (kbd "C-c b") 'web-beautify-html))
+(eval-after-load 'css-mode
+  '(define-key css-mode-map (kbd "C-c b") 'web-beautify-css))
+
+(setq-default indent-tabs-mode nil)
+(setq tab-width 2)
+;;(setq js-indent-level 2) ;;js-mode
+(setq-default js2-basic-offset 2) ;;js2-mode
+
+(require 'js-doc)
+(setq js-doc-mail-address "evandenrijd@gmail.com"
+      js-doc-author (format "van <%s>" js-doc-mail-address)
+      ;;js-doc-url "url of your website"
+      ;;js-doc-license "license name"
+)
+
+(add-hook 'js2-mode-hook
+          #'(lambda ()
+              (define-key js2-mode-map "\C-cd" 'js-doc-insert-function-doc)
+              (define-key js2-mode-map "@" 'js-doc-insert-tag)))
+
 (provide 'setup-js2-mode)

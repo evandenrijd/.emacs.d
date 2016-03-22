@@ -127,6 +127,7 @@
 (require 'setup-ffip)
 (require 'setup-html-mode)
 (require 'setup-paredit)
+(require 'setup-smartparens)
 (require 'setup-perl)
 (require 'setup-grep-ack)
 
