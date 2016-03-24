@@ -72,4 +72,7 @@
 (ido-ubiquitous-use-new-completing-read yas-expand 'yasnippet)
 (ido-ubiquitous-use-new-completing-read yas-visit-snippet-file 'yasnippet)
 
+;; when using C-x C-f find-file, placing a dot exec the dired-command
+(setq ido-show-dot-for-dired t)
+
 (provide 'setup-ido)
