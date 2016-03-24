@@ -130,6 +130,7 @@
 (require 'setup-smartparens)
 (require 'setup-perl)
 (require 'setup-grep-ack)
+(require 'setup-buffer-extension)
 
 (require 'prodigy)
 (global-set-key (kbd "C-x M-m") 'prodigy)
@@ -243,6 +244,7 @@
 (global-set-key [S-f6]  'second-tag)
 (global-set-key [f6]    'find-tag)
 
+(global-set-key [f7]    'copy-buffer-file-name-as-kill)
 (global-set-key [f8]    'kill-this-buffer)
 
 (global-set-key [C-f11] 'compile)
