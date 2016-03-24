@@ -54,7 +54,7 @@
 (when window-system
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (tooltip-mode -1)
-  (set-frame-size (selected-frame) 130 60)
+  (set-frame-size (selected-frame) 150 73)
   (blink-cursor-mode -1))
 
 ;; Make zooming affect frame instead of buffers
