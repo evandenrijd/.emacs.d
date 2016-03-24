@@ -60,7 +60,7 @@
  ("M-k"   . sp-backward-kill-sexp)
  ("C-M-w" . sp-copy-sexp)
 
- ("C-M-d" . delete-sexp)
+ ("C-M-d" . kill-sexp)
 
  ("M-<backspace>" . backward-kill-word)
  ("C-<backspace>" . sp-backward-kill-word)
