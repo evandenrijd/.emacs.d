@@ -1,4 +1,7 @@
 ;; Turn off mouse interface early in startup to avoid momentary display
+
+(package-initialize)
+
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -131,6 +134,7 @@
 (require 'setup-perl)
 (require 'setup-grep-ack)
 (require 'setup-buffer-extension)
+(require 'setup-rfc)
 
 (require 'prodigy)
 (global-set-key (kbd "C-x M-m") 'prodigy)
