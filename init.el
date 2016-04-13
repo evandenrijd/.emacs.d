@@ -248,7 +248,13 @@
 (global-set-key [S-f6]  'second-tag)
 (global-set-key [f6]    'find-tag)
 
+(defun kill-this-buffer-bis ()
+  "replacement of kill-this-buffer, because did nothing on Max OSX"
+  (interactive)
+  (kill-buffer (current-buffer)))
+
 (global-set-key [f7]    'copy-buffer-file-name-as-kill)
-(global-set-key [f8]    'kill-this-buffer)
+(global-set-key [f8]    'kill-this-buffer-bis)
+(global-set-key (kbd "C-x k") 'kill-this-buffer-bis)
 
 (global-set-key [C-f11] 'compile)
