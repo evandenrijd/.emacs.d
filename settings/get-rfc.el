@@ -113,9 +113,8 @@ to a specified filename."
   :group 'get-rfc
   :type 'string)
   
-(defcustom get-rfc-local-rfc-directory "rfcs/"
+(defcustom get-rfc-local-rfc-directory (expand-file-name "rfcs/" user-emacs-directory)
   "*Directory in which RFCs are available locally.
-
 This *must* end in a trailing slash."
   :group 'get-rfc
   :type 'string)
