@@ -20,12 +20,16 @@
   (when (boundp 'magnars/presentation-font)
     (set-face-attribute 'default nil :font magnars/presentation-font)))
 
+;; essentially set the font-size
+(setq van/default-font "-*-*-*-*-*-*-16-*-*-*-m-0-iso10646-1")
+
 (defun use-default-theme ()
   (interactive)
-  ;;(load-theme 'default-black)
-  (load-theme 'adwaita t)
-  (when (boundp 'magnars/default-font)
-    (set-face-attribute 'default nil :font magnars/default-font)))
+  (load-theme 'default-black)
+  ;; (load-theme 'adwaita t)
+  (when (boundp 'magnar/default-font)
+    (set-face-attribute 'default nil :font magnar/default-font))
+  (set-face-attribute 'default nil :font van/default-font))
 
 (defun toggle-presentation-mode ()
   (interactive)
@@ -54,7 +58,7 @@
 (when window-system
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (tooltip-mode -1)
-  (set-frame-size (selected-frame) 150 73)
+  (set-frame-size (selected-frame) 150 69)
   (blink-cursor-mode -1))
 
 ;; Make zooming affect frame instead of buffers

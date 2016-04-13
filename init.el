@@ -221,6 +221,7 @@
 (require 'project-archetypes)
 (require 'my-misc)
 (when is-mac (require 'mac))
+(set-face-attribute 'default nil :font van/default-font)
 
 ;; Elisp go-to-definition with M-. and back again with M-,
 (autoload 'elisp-slime-nav-mode "elisp-slime-nav")
