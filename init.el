@@ -135,6 +135,7 @@
 (require 'setup-grep-ack)
 (require 'setup-buffer-extension)
 (require 'setup-rfc)
+(require 'setup-typescript)
 
 (require 'prodigy)
 (global-set-key (kbd "C-x M-m") 'prodigy)
